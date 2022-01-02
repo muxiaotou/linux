@@ -31,4 +31,7 @@
     一般git clone或者git push，会遇到git@xxx或者https@xxx
     git@使用ssh协议，可以将本地的公钥加到github上面，本地后面pull、push均免密
     https@每次push或者pull，均需要输入密码
+
+    【rebase和merge区别】
+    git rebase master 会改变每条提交的commit id
     
