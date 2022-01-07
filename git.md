@@ -34,4 +34,15 @@
 
     【rebase和merge区别】
     git rebase master 会改变每条提交的commit id
+
+    【强制拉取远端代码覆盖本地代码】
+    1. git fetch --all
+    2. git reset --hard origin/master  (此处master为分支，根据实际情况进行修改)
+    3. git pull
+
+    【origin、local branch同步】
+    git remote show origin   查看本地与远端的分支跟踪情况
+    git remote prune origin 从本地删除远端已经不存在的branch的跟踪
+    git  branch -D BRANCH_NAME  删除本地分支
+    git push origin --delete dev  删除远端dev分支
     
