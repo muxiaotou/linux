@@ -45,4 +45,9 @@
     git remote prune origin 从本地删除远端已经不存在的branch的跟踪
     git  branch -D BRANCH_NAME  删除本地分支
     git push origin --delete dev  删除远端dev分支
+
+    【git add . 和git add --all 区别】
+    1）1.x版本 git add --all 可以提交未追踪、修改和删除的文件；git add .可以提交未追踪、修改的文件，但不处理删除的文件
+    2）2.x版本 git add --all和git add .都可以提交未追踪、修改和删除的文件
+    3）git add --all无论在哪个目录都会提交响应的文件；git add .只能够提交当前目录或者它子目录下的响应文件
     
