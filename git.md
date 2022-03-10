@@ -45,4 +45,35 @@
     git remote prune origin 从本地删除远端已经不存在的branch的跟踪
     git  branch -D BRANCH_NAME  删除本地分支
     git push origin --delete dev  删除远端dev分支
+
+    【常用的git命令整理】
+    git add -A/git add --all
+    git commit -am ""
+    git commit --amend 修改commit信息
+    git push origin master
+
+    git init  初始化本地仓库，远程仓库叫做origin
+    git remote -v  显示远程仓库
+    git remote add URL  将本地仓库与远程仓库关联
+    git remote set-url origin URL 修改本地仓库关联的远程仓库
+
+    git clone 克隆一个远程仓库
+    git branch 列出本地分支
+    git branch <NAME> 新建本地分支
+    git checkout <NAME> 切换分支
+    git checkout -b <NAME> 新建一个分支并切换过去
+
+    git checkout master; git merge dev   切换到master，然后把dev分支合并到master
+
+    git pull origin master  拉取远端的master分支到当前的本地分支
+    git status 查看当前分支哪些文件被修改、未被追踪等
+    git diff --stat 列出不同，仅列出文件名，默认列出文件内容变化
+
+    git log 提交历史
+    git push origin master -f  强制覆盖远端分支
+
+    git rebase -i HEAD^4 合并提交
+    
+    
+
     
