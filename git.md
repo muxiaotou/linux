@@ -78,3 +78,5 @@
     git push origin master -f  强制覆盖远端分支
 
     git rebase -i HEAD^4 合并提交
+
+    git show <commit> 显示指定commit的提交内容，commit未指定时默认未HEAD,即最后一次提交

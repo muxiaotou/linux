@@ -1,0 +1,1 @@
+    新服务端口均在10000以下，在playbook当中已按照研发规划的端口进行了配置，并且在/etc/sysctl.conf当中配置了local port范围net.ipv4.ip_local_port_range = 10000 59000，预期不会有端口冲突问题再出现
