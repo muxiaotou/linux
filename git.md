@@ -80,3 +80,18 @@
     git rebase -i HEAD^4 合并提交
 
     git show <commit> 显示指定commit的提交内容，commit未指定时默认未HEAD,即最后一次提交
+
+    
+#### https://mp.weixin.qq.com/s/a7ChQILEtd6TUHYy5GCFeA 
+1. 在某个节点创建一个分支后，并不会把该节点对应的代码复制一份出来，只是将新分支指向该节点，因此很大
+    程度减少空间上的开销。 
+2. git中文件分为三种状态：modified、staged、commited，已修改、已暂存、已提交
+3. HEAD 是git中非常重要的一个概念，可以理解为它是一个指针或者引用，它可以指向任意一个节点，并且指
+   向的节点始终为当前工作目录，换句话说就是当前工作目录，也就是所看到的代码就是HEAD指向的节点
+4. 一些命令
+    git checkout -- 文件名   //撤销工作区某个文件的改动
+    git reset HEAD 文件名    //清空暂存区
+5. 合并命令  merge、rebase、cherry-pick
+    git merge 分支名/节点哈希值  //将某个分支或者某个节点的代码合并至当前分支，当两个分支有冲突时，合并生成一个新的节点
+    git rebase 分支名/节点哈希值
+    
