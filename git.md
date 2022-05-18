@@ -54,7 +54,8 @@
     【常用的git命令整理】
     git add -A/git add --all
     git commit -am ""
-    git commit --amend 修改commit信息
+    git commit --amend 修改上次commit信息，也可以多次修改后，放入同一次commit当中，比如：
+    git add 后，git commit --amend --no-edit或者git commit --amend，这样就讲本次修改同上次修改合入同一个commit里面了
     git push origin master
 
     git init  初始化本地仓库，远程仓库叫做origin
@@ -93,5 +94,20 @@
     git reset HEAD 文件名    //清空暂存区
 5. 合并命令  merge、rebase、cherry-pick
     git merge 分支名/节点哈希值  //将某个分支或者某个节点的代码合并至当前分支，当两个分支有冲突时，合并生成一个新的节点
-    git rebase 分支名/节点哈希值
+    git rebase 分支名/节点哈希值 //表明看起来不会产生新的节点(实际commit会变)，将需要合并的节点直接依次按照提交历史进行累加
+    merge优缺点：
+    每个节点都严格按照时间顺序，当合并发生冲突时，只需要解决两个分支所指向的节点的冲突(即只需要一次解决所有冲突)
+    rebase优缺点：
+    按照时间顺序依次累加，提交历史看起来比较线性、干净。缺点就是当不同分支commit冲突较多时，每个commit均需多次处理冲突
+   
+    git cherry-pick 节点哈希值  //将提供的节点合并到当前分支，支持一次合并多个节点
+6. clone fetch pull  push 
+    clone 将远程仓库的所有提交、引用保存在本地一份，但后续的变更，不会实时同步本地，需要在本地执行git fetch 去主动获取
+    fetch 通俗一点就是一次下载操作，会将远程新增加的节点以及引用(分支/HEAD)的状态下载到本地， git fetch 远程仓库地址/分支名
+    pull  本质就是fetch+merge，即将远端对应代码拉取下来后与本地当前分支代码合并
+   
+    git  fetch  //拉取远端所有分支的变更到本地，但不会更新本地仓库的版本状态，
+        因此还需要checkout到分支里面，git pull origin <branch>来同步远端修改到本地
+    git  pull   //拉取远端所有分支的变更到本地，并更新本地仓库的版本状态
+    
     
