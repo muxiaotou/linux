@@ -38,7 +38,8 @@
     【强制拉取远端代码覆盖本地代码】
     1. git fetch --all
     2. git reset --hard origin/master  (此处master为分支，根据实际情况进行修改)
-    3. git pull
+    3. git pull origin master
+    其实直接git pull --force origin master:master即可
 
     【origin、local branch同步】
     git remote show origin   查看本地与远端的分支跟踪情况
