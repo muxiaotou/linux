@@ -14,3 +14,6 @@
       tasks:
         - name: ls cbd.ko      
           shell: "cd /lib/modules/{{ ansible_kernel }}/kernel/drivers/block/ && md5sum cbd.ko"
+
+    inventory_hostname 清单文件hosts当中的配置，可以是域名或者ip
+    ansible_hostname  由ansible发现的主机名
